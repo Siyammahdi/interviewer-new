@@ -1,7 +1,7 @@
 import React from "react";
 import Subtitle from "../_components/Subtitle";
 import Section from "../_components/Section";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 interface CompanyProps {
   id: number;
@@ -50,7 +50,7 @@ const TopCompanies: React.FC = () => {
   return (
     <Section className="">
       <Subtitle>Hire experts from top companies</Subtitle>
-      <div className="grid grid-cols-4 gap-4 justify-between items-center">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 justify-between items-center">
         {companies.map((company) => (
           <div
             className="w-full flex justify-center items-center h-28 bg-gray-100 rounded-2xl"

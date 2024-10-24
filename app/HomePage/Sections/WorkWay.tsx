@@ -1,7 +1,7 @@
 import React from "react";
 import Subtitle from "../_components/Subtitle";
 import Title from "../_components/Title";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Section from "../_components/Section";
 import { IconType } from "react-icons";
 import { HiOutlineBriefcase, HiOutlineServerStack } from "react-icons/hi2";
@@ -21,13 +21,13 @@ const JobCard: React.FC<JobCardProps> = ({ title, type, location, rate, Icon }) 
       <div className="flex items-center">
         <Icon className="text-white bg-blue-500 rounded-lg h-10 w-10 p-2 mr-4" />
         <div>
-          <h3 className="text-lg font-semibold">{title}</h3>
-          <p className="text-sm text-gray-500">
+          <h3 className="text-sm md:text-lg font-semibold">{title}</h3>
+          <p className="text-xs md:text-sm text-gray-500">
             {type} • {location}
           </p>
         </div>
       </div>
-      <div className="text-blue-500 font-semibold">{rate} / hour</div>
+      <div className="text-sm md:text-base text-blue-500 font-semibold">{rate} / hour</div>
     </div>
   );
 };
@@ -35,10 +35,10 @@ const JobCard: React.FC<JobCardProps> = ({ title, type, location, rate, Icon }) 
 const WorkWay: React.FC = () => {
   return (
     <Section className="flex flex-col md:flex-row items-center justify-between py-16">
-      <div className="md:w-1/2 space-y-8 pr-14 md:mb-0">
+      <div className="md:w-1/2 space-y-8 lg:pr-14 md:mb-0">
         <Subtitle>A new way to work</Subtitle>
         <Title>Apply once, reach thousands of companies</Title>
-        <p className="text-gray-600">
+        <p className="text-gray-600 text-xs md:text-sm lg:text-base">
           Upload your resume and complete our 20-minute interview. Afterwards,
           Mercor will send your application to thousands of companies to find
           the best roles for you.

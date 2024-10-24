@@ -1,11 +1,13 @@
+
 import React from 'react';
+import { GoPlay } from 'react-icons/go';
 
 const AIInterview: React.FC = () => {
   return (
-    <div className="mt-6 px-8">
+    <div className="mt-6 px-12">
       <h2 className="text-lg font-semibold">AI Interview</h2>
-      <div className="w-full h-56 mt-4 rounded-2xl bg-black text-white flex items-center justify-center">
-        <p>The media could not be loaded, either because the server or network failed or because the format is not supported.</p>
+      <div className=" mt-4 bg-black rounded-2xl py-28 flex items-center justify-center">
+      <GoPlay className='text-white' size={200} />
       </div>
     </div>
   );

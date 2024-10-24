@@ -1,7 +1,7 @@
 import { blogs } from "./data";
 import BlogCard from "../Components/BlogCard";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const BlogPage = () => {
   const importantBlog = blogs[0];

@@ -26,10 +26,10 @@ const Tabs: React.FC = () => {
 
       {/* Tab Content */}
       <div className="mt-4 px-8">
-        {activeTab === 'Interview' && <p>AI Interview content will appear here.</p>}
-        {activeTab === 'Experience' && <p>Experience content will appear here.</p>}
-        {activeTab === 'Education' && <p>Education content will appear here.</p>}
-        {activeTab === 'Projects' && <p>Projects content will appear here.</p>}
+        {activeTab === 'Interview' && <p></p>}
+        {activeTab === 'Experience' && <p></p>}
+        {activeTab === 'Education' && <p></p>}
+        {activeTab === 'Projects' && <p></p>}
       </div>
     </div>
   );

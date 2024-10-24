@@ -7,7 +7,7 @@ interface SubtitleProp {
 const Subtitle: React.FC<SubtitleProp> = ({children}) => {
     return (
         <div>
-            <p className='font-semibold my-8 text-blue-500'>{children}</p>
+            <p className='text-xs md:text-sm lg:text-base font-semibold my-4 md:my-8 text-blue-500'>{children}</p>
         </div>
     );
 };

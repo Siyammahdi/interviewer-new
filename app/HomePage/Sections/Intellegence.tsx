@@ -1,18 +1,17 @@
 import React from "react";
-import Subtitle from "../_components/Subtitle"; // Subtitle component
-import Title from "../_components/Title"; // Title component
-import Section from "../_components/Section"; // Section wrapper
-import Image from "next/image"; // Image component from Next.js for optimization
+import Subtitle from "../_components/Subtitle";
+import Title from "../_components/Title";
+import Section from "../_components/Section"; 
+import Image from "next/legacy/image";
 import Button from "../_components/Button";
 
 const Intellegence: React.FC = () => {
   return (
     <Section className="flex flex-col md:flex-row items-center justify-between py-16">
-      {/* Left Section */}
       <div className="md:w-1/2 space-y-8 pr-12">
         <Subtitle>Intelligence engineering</Subtitle>
         <Title>Work at the frontier of AI development</Title>
-        <div className="pl-10 space-y-5">
+        <div className="md:pl-10 space-y-5 text-xs md:text-sm lg:text-base">
           <p className="text-gray-600 leading-relaxed">
             Solve complex problems in your area of expertise. Expand your
             knowledge and let your creativity and brilliance shine.
@@ -28,8 +27,7 @@ const Intellegence: React.FC = () => {
           </p>
         </div>
 
-        {/* Buttons */}
-        <div className="flex gap-4">
+        <div className="pb-10 flex gap-4">
           <Button>Apply for work</Button>
           <Button variant="secondary">
             Hire instantly <span className="ml-2">→</span>
@@ -37,10 +35,9 @@ const Intellegence: React.FC = () => {
         </div>
       </div>
 
-      {/* Right Section */}
       <div className="md:w-1/2 flex justify-center items-center">
         <Image
-          src="/Ai.png" // Replace with the correct path to the image asset
+          src="/Ai.png" 
           alt="AI development illustration"
           width={400}
           height={400}

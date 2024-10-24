@@ -1,7 +1,7 @@
 import React from "react";
 import Subtitle from "../_components/Subtitle";
 import Section from "../_components/Section";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 interface CompanyProps {
   id: number;
@@ -13,7 +13,7 @@ const companies: CompanyProps[] = [
   {
     id: 1,
     path: "/Brands/image 10.png",
-    w: 50, 
+    w: 50,
   },
   {
     id: 2,
@@ -33,11 +33,11 @@ const HiredCompanies: React.FC = () => {
   return (
     <Section className="">
       <Subtitle>1000+ hired recently, as seen on...</Subtitle>
-      <div className="flex gap-4 justify-between items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 items-center mt-6">
         {companies.map((company) => (
           <div
-            className="w-full flex justify-center items-center h-28 bg-gray-100 rounded-2xl"
             key={company.id}
+            className="flex justify-center items-center h-16 md:h-20 lg:h-28 bg-gray-100 rounded-lg md:rounded-xl lg:rounded-2xl"
           >
             <Image
               src={company.path}
@@ -53,7 +53,3 @@ const HiredCompanies: React.FC = () => {
 };
 
 export default HiredCompanies;
-
-
-
-

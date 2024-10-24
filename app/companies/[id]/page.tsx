@@ -6,7 +6,7 @@ import AIInterview from "./_components/AiInterview";
 const ProfileDetails = () => {
   return (
     <div>
-      <div className="min-h-screen border-l">
+      <div className="min-h-screen border-l pt-20">
         {/* Profile Header */}
         <ProfileHeader />
 

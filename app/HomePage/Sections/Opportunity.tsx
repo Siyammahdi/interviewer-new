@@ -2,7 +2,7 @@ import React from "react";
 import Subtitle from "../_components/Subtitle";
 import Title from "../_components/Title";
 import Section from "../_components/Section";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const Opportunity: React.FC = () => {
   return (
@@ -10,7 +10,7 @@ const Opportunity: React.FC = () => {
       <div className="md:w-1/3  space-y-8">
         <Subtitle>Globalizing opportunity</Subtitle>
         <Title>Apply and work from anywhere</Title>
-        <p className="text-gray-600">
+        <p className="text-gray-600 text-xs md:text-sm lg:text-base">
           Mercor allows you to interview from wherever you are and receive job
           opportunities from anywhere in the world.
         </p>
@@ -19,7 +19,7 @@ const Opportunity: React.FC = () => {
       <div className="md:w-1/2 flex justify-center items-center">
         <div className="relative">
 
-          <div className="">
+          <div className="w-2/3 lg:w-full">
             <div className="mt-14">
               <Image
                 className="-mr-44"
@@ -30,7 +30,7 @@ const Opportunity: React.FC = () => {
               />
               <div className="-mt-24 ">
                 <Image
-                  className="-mb-80 -ml-10"
+                  className="-mb-44 md:-mb-80 md:-ml-10"
                   src="/Banner/Rectangle 9.png"
                   alt="1"
                   height={440}

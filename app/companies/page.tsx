@@ -1,18 +1,19 @@
-import React from "react";
-import Profiles from "./Containers/Profiles";
-import Menubar from "./Containers/MenuBar";
+
 import ProfileDetails from "./[id]/page";
+import CompaniesLayout from "./CompaniesLayout";
+import Profiles from "./Containers/Profiles";
 
 const Companies = () => {
   return (
-    <div className="flex w-full">
-      <div className="flex w-1/2">
-        <Menubar />
+    <div>
+      <CompaniesLayout>
         <Profiles />
+        <div className="flex w-full">
+        <div className="fixed right-0 top-0 bg-white z-10 h-full w-1/2">
+          <ProfileDetails />
+        </div>
       </div>
-      <div className="w-1/2">
-        <ProfileDetails />
-      </div>
+      </CompaniesLayout>
     </div>
   );
 };

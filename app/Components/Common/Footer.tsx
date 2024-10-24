@@ -5,14 +5,12 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-white py-8">
       <Section>
-        <div className="flex items-end px-4">
-          {/* Bottom Section */}
-          <div className="mt-8 w-1/4 font-semibold text-sm text-gray-700">
+        <div className="flex flex-col md:flex-row md:items-end px-4 text-xs md:text-sm lg:text-base">
+          <div className="mt-8 md:w-1/4 mb-5 md:mb-0  font-semibold text-sm text-gray-700">
             <p>San Francisco, CA</p>
             <p>© 2024 Mercor</p>
           </div>
-          <div className="w-3/4 flex justify-between">
-            {/* Left Section */}
+          <div className="md:w-3/4 flex justify-between">
             <div>
               <ul className="space-y-2">
                 <li className="font-bold">For companies</li>
@@ -28,8 +26,6 @@ const Footer: React.FC = () => {
                 <li>Incentives</li>
               </ul>
             </div>
-
-            {/* Middle Section */}
             <div>
               <ul className="space-y-2">
                 <li className="font-bold">For candidates</li>
@@ -45,8 +41,6 @@ const Footer: React.FC = () => {
                 <li>Schedule call</li>
               </ul>
             </div>
-
-            {/* Right Section */}
             <div>
               <ul className="space-y-2">
                 <li className="font-bold">Resources</li>

@@ -19,8 +19,8 @@ const FilterButton: React.FC<FilterButtonProps> = ({ icon, label }) => {
 
 const Profiles = () => {
   return (
-    <div className="w-full">
-      <div className="p-10 space-y-6">
+    <div className="w-full pt-12">
+      <div className="px-28 space-y-6">
         <div className="space-y-4">
           {/* Search Bar */}
           <div className="flex justify-between items-center p-2 bg-white border rounded-full shadow-sm">
@@ -54,6 +54,30 @@ const Profiles = () => {
             <FilterButton icon={<FiSearch />} label="Worked at Amazon" />
           </div>
         </div>
+        <ProfileCard
+          name="M. S."
+          experience="12 years"
+          description="Led AWS Private Console project, impacting 260 service teams at Amazon Web Services."
+          skills={["AWS", "React", "Angular", "Spring", "Kubernetes"]}
+          commitments={["Full-time", "Part-time"]}
+          imageUrl="https://i.pravatar.cc/150?u=a042581f4e29026704d"
+        />
+        <ProfileCard
+          name="M. S."
+          experience="12 years"
+          description="Led AWS Private Console project, impacting 260 service teams at Amazon Web Services."
+          skills={["AWS", "React", "Angular", "Spring", "Kubernetes"]}
+          commitments={["Full-time", "Part-time"]}
+          imageUrl="https://i.pravatar.cc/150?u=a042581f4e29026704d"
+        />
+        <ProfileCard
+          name="M. S."
+          experience="12 years"
+          description="Led AWS Private Console project, impacting 260 service teams at Amazon Web Services."
+          skills={["AWS", "React", "Angular", "Spring", "Kubernetes"]}
+          commitments={["Full-time", "Part-time"]}
+          imageUrl="https://i.pravatar.cc/150?u=a042581f4e29026704d"
+        />
         <ProfileCard
           name="M. S."
           experience="12 years"
