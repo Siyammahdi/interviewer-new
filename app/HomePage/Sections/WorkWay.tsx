@@ -6,6 +6,8 @@ import Section from "../_components/Section";
 import { IconType } from "react-icons";
 import { HiOutlineBriefcase, HiOutlineServerStack } from "react-icons/hi2";
 import { GoStack } from "react-icons/go";
+import globe from "@/Public/globe.png"
+import business1 from "@/Public/busniess 1.png"
 
 interface JobCardProps {
   title: string;
@@ -69,21 +71,25 @@ const WorkWay: React.FC = () => {
         </div>
       </div>
 
-      <div className="md:w-1/2">
-        <Image
-          src="/globe.png"
-          alt="Illustration showing data analysis"
-          width={550} 
-          height={550}
-          className="-mb-52"
-        />
-        <Image
-          src="/busniess 1.png"
-          alt="Illustration showing data analysis"
-          width={550} 
-          height={550}
-          className=""
-        />
+      <div className="md:w-1/2 relative">
+        <div className="absolute -bottom-60">
+          <Image
+            src={globe}
+            alt="Illustration showing data analysis"
+            width={800}
+            height={550}
+            className=""
+          />
+        </div>
+        <div className="absolute -top-16">
+          <Image
+            src={business1}
+            alt="Illustration showing data analysis"
+            width={800}
+            height={550}
+            className=""
+          />
+        </div>
       </div>
     </Section>
   );

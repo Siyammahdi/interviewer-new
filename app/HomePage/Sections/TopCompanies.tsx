@@ -1,48 +1,56 @@
 import React from "react";
 import Subtitle from "../_components/Subtitle";
 import Section from "../_components/Section";
-import Image from "next/legacy/image";
+import Image, { StaticImageData } from "next/image";
+import Brand2 from "@/Public/Brands/image 2.png";
+import Brand3 from "@/Public/Brands/image 3.png";
+import Brand4 from "@/Public/Brands/image 4.png";
+import Brand5 from "@/Public/Brands/image 5.png";
+import Brand6 from "@/Public/Brands/image 6.png";
+import Brand7 from "@/Public/Brands/image 7.png";
+import Brand8 from "@/Public/Brands/image 8.png";
+import Brand9 from "@/Public/Brands/image 9.png";
 
 interface CompanyProps {
   id: number;
-  path: string;
+  path: StaticImageData;
   w?: number;
 }
 
 const companies: CompanyProps[] = [
   {
     id: 1,
-    path: "/Brands/image 2.png",
+    path: Brand2,
     w: 50, 
   },
   {
     id: 2,
-    path: "/Brands/image 3.png",
+    path: Brand3,
   },
   {
     id: 3,
-    path: "/Brands/image 4.png",
+    path: Brand4,
   },
   {
     id: 4,
-    path: "/Brands/image 5.png",
+    path: Brand5,
   },
   {
     id: 5,
-    path: "/Brands/image 6.png",
+    path: Brand6,
     w: 60,
   },
   {
     id: 6,
-    path: "/Brands/image 7.png",
+    path: Brand7,
   },
   {
     id: 7,
-    path: "/Brands/image 8.png",
+    path: Brand8,
   },
   {
     id: 8,
-    path: "/Brands/image 9.png",
+    path: Brand9,
   },
 ];
 

@@ -3,7 +3,10 @@ import Subtitle from "../_components/Subtitle";
 import Title from "../_components/Title"; 
 import Section from "../_components/Section"; 
 import Button from "../_components/Button";
-import Image from "next/legacy/image"; 
+import Image, { StaticImageData } from "next/image"; 
+import Dash1 from "@/Public/Banner/dashboard 1.png"
+import Dash2 from "@/Public/Banner/dashboard 2.png"
+
 import {
   AiOutlineSearch,
   AiOutlineUserAdd,
@@ -14,7 +17,7 @@ const Card: React.FC<{
   keyword: string;
   title: string;
   description: string;
-  image: string;
+  image: StaticImageData;
   icon: React.ReactNode;
 }> = ({ keyword, title, description, image, icon }) => (
   <div className=" border border-gray-200 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
@@ -60,14 +63,14 @@ const HiringSection: React.FC = () => {
             keyword="Search"
             title="Browse candidates"
             description="We index resumes, interviews, and online profiles to find candidates that perfectly match your role."
-            image="/Banner/dashboard 1.png"
+            image={Dash1}
             icon={<AiOutlineSearch className="text-lg text-blue-600" />}
           />
           <Card
             keyword="Shortlist"
             title="Request intros"
             description="Schedule meetings with anyone in our talent pool with a single click. All of our candidates are actively looking for opportunities."
-            image="/Banner/dashboard 2.png"
+            image={Dash2}
             icon={<AiOutlineUserAdd className="text-lg text-blue-600" />}
           />
         </div>
@@ -76,14 +79,14 @@ const HiringSection: React.FC = () => {
             keyword="Team"
             title="Hire instantly"
             description="The hire instantly button allows you to send contracts and onboard your team today, eliminating overhead from hiring."
-            image="/Banner/dashboard 1.png"
+            image={Dash1}
             icon={<AiOutlineTeam className="text-lg text-blue-600" />}
           />
           <Card
             keyword="Payment"
             title="Setup payouts"
             description="Simply pay through our platform and allow us to facilitate seamless global payments, compliant with US law."
-            image="/Banner/dashboard 2.png"
+            image={Dash2}
             icon={<AiOutlineDollar className="text-lg text-blue-600" />}
           />
         </div>

@@ -4,6 +4,7 @@ import Title from "../_components/Title";
 import Section from "../_components/Section"; 
 import Image from "next/legacy/image";
 import Button from "../_components/Button";
+import AiImg from "@/Public/Ai.png";
 
 const Intellegence: React.FC = () => {
   return (
@@ -37,7 +38,7 @@ const Intellegence: React.FC = () => {
 
       <div className="md:w-1/2 flex justify-center items-center">
         <Image
-          src="/Ai.png" 
+          src={AiImg} 
           alt="AI development illustration"
           width={400}
           height={400}

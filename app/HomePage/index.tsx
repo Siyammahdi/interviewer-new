@@ -12,8 +12,10 @@ import HiringSection from './Sections/HiringSection';
 const HomePage = () => {
     return (
         <div>
-            <Banner />
-            <HiredCompanies />
+            <div className='space-y-28'>
+                <Banner />
+                <HiredCompanies />
+            </div>
             <WorkWay />
             <Opportunity />
             <Intellegence />

@@ -7,7 +7,7 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 import globeImg from "../../../Public/globe.png"
 import dash1 from "@/Public/Banner/dashboard 1.png"
 import dash2 from "@/Public/Banner/dashboard 2.png"
-// import gradiant from "@/"
+import gradiant from "@/Public/Banner/Rectangle 12.png"
 
 const Banner = () => {
   return (
@@ -15,7 +15,7 @@ const Banner = () => {
       <div className="relative flex justify-between">
         <div className="md:w-1/2 space-y-4 md:space-y-8">
           <p className="py-2 px-6 rounded-full border border-t-2 text-xs mt-20 w-fit">Mercor raises $32 million to find your next job <span className="text-blue-500">• Read Forbes</span></p>
-          <Title >Mercor matches you with elite opportunities</Title>
+          <Title>Mercor matches you with elite opportunities</Title>
           <p className="w-3/4 text-xs md:text-sm lg:text-base">
             Join the thousands of candidates around the world using Mercor to
             land their remote dream job with just a single application.
@@ -59,8 +59,8 @@ const Banner = () => {
             />
           </div>
         </div>
-        <div className="absolute -bottom-48 z-30">
-          <Image className="" src="/Banner/Rectangle 12.png" width={1200} height={200} alt="grad" />
+        <div className="absolute -bottom-48">
+          <Image className="" src={gradiant} width={1200} height={200} alt="grad" />
         </div>
       </div>
     </Section>

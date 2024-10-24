@@ -3,6 +3,7 @@ import Subtitle from "../_components/Subtitle"; // Assuming Subtitle component e
 import Title from "../_components/Title"; // Assuming Title component exists
 import Section from "../_components/Section"; // Assuming Section wrapper exists
 import Image from "next/legacy/image"; // For optimized image handling in Next.js
+import CareerImg from "@/Public/career.png";
 
 const Career: React.FC = () => {
   return (
@@ -40,10 +41,10 @@ const Career: React.FC = () => {
           </div>
           <div className="">
             <Image
-              src="/career.png"
+              src={CareerImg}
               alt="People working together"
               width={900}
-              height={800}
+              height={500}
               className="rounded-lg"
             />
           </div>
