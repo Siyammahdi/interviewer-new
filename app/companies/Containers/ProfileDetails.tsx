@@ -9,6 +9,7 @@ import { GiElectric } from "react-icons/gi";
 import Image from "next/image";
 import { LiaIdCardAltSolid } from "react-icons/lia";
 import { PiCursorClickDuotone } from "react-icons/pi";
+import { GoPlay } from "react-icons/go";
 
 const ProfileDetails = () => {
     const { selectedCompanyId } = useSelectedCompany();
@@ -117,6 +118,13 @@ const ProfileDetails = () => {
                         {tab}
                     </button>
                 ))}
+            </div>
+
+            <div className="mt-6 px-12">
+                <h2 className="text-lg font-semibold">AI Interview</h2>
+                <div className=" mt-4 bg-black rounded-2xl py-28 flex items-center justify-center">
+                    <GoPlay className='text-white' size={200} />
+                </div>
             </div>
         </div>
     );
