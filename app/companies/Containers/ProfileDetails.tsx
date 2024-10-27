@@ -4,7 +4,7 @@
 import React, { useState } from "react";
 import { useSelectedCompany } from "../context/SelectedCompanyContext";
 import { profiles } from "../data";
-import { BsFillBookmarkFill, BsFillPersonCheckFill, BsPersonVideo, BsStars } from "react-icons/bs";
+import { BsFillBookmarkFill, BsFillPersonCheckFill, BsStars } from "react-icons/bs";
 import { GiElectric } from "react-icons/gi";
 import Image from "next/image";
 import { LiaIdCardAltSolid } from "react-icons/lia";
