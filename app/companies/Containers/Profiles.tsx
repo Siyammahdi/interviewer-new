@@ -1,7 +1,11 @@
+"use client";
+
 import React from "react";
 import ProfileCard from "../_components/ProfileCard";
 import { FiSearch } from "react-icons/fi";
 import { LiaSlidersHSolid } from "react-icons/lia";
+import { profiles } from "../data"; // Ensure your data is correctly imported
+import { useSelectedCompany } from "../context/SelectedCompanyContext";
 
 type FilterButtonProps = {
   icon: JSX.Element;
@@ -17,10 +21,16 @@ const FilterButton: React.FC<FilterButtonProps> = ({ icon, label }) => {
   );
 };
 
-const Profiles = () => {
+const Profiles: React.FC = () => {
+  const { setSelectedCompanyId } = useSelectedCompany();
+
+  const handleCardClick = (id: number) => {
+    setSelectedCompanyId(id); // Set the selected company ID in context
+  };
+
   return (
     <div className="w-full pt-12">
-      <div className="px-28 space-y-6">
+      <div className="py-16 px-6 space-y-6">
         <div className="space-y-4">
           {/* Search Bar */}
           <div className="flex justify-between items-center p-2 bg-white border rounded-full shadow-sm">
@@ -48,68 +58,31 @@ const Profiles = () => {
           </div>
 
           {/* Filter Buttons */}
-          <div className="flex space-x-4 ">
+          <div className="flex space-x-4">
             <FilterButton icon={<FiSearch />} label="Worked on web scraping" />
             <FilterButton icon={<FiSearch />} label="Lives in South America" />
             <FilterButton icon={<FiSearch />} label="Worked at Amazon" />
           </div>
         </div>
-        <ProfileCard
-          name="M. S."
-          experience="12 years"
-          description="Led AWS Private Console project, impacting 260 service teams at Amazon Web Services."
-          skills={["AWS", "React", "Angular", "Spring", "Kubernetes"]}
-          commitments={["Full-time", "Part-time"]}
-          imageUrl="https://i.pravatar.cc/150?u=a042581f4e29026704d"
-        />
-        <ProfileCard
-          name="M. S."
-          experience="12 years"
-          description="Led AWS Private Console project, impacting 260 service teams at Amazon Web Services."
-          skills={["AWS", "React", "Angular", "Spring", "Kubernetes"]}
-          commitments={["Full-time", "Part-time"]}
-          imageUrl="https://i.pravatar.cc/150?u=a042581f4e29026704d"
-        />
-        <ProfileCard
-          name="M. S."
-          experience="12 years"
-          description="Led AWS Private Console project, impacting 260 service teams at Amazon Web Services."
-          skills={["AWS", "React", "Angular", "Spring", "Kubernetes"]}
-          commitments={["Full-time", "Part-time"]}
-          imageUrl="https://i.pravatar.cc/150?u=a042581f4e29026704d"
-        />
-        <ProfileCard
-          name="M. S."
-          experience="12 years"
-          description="Led AWS Private Console project, impacting 260 service teams at Amazon Web Services."
-          skills={["AWS", "React", "Angular", "Spring", "Kubernetes"]}
-          commitments={["Full-time", "Part-time"]}
-          imageUrl="https://i.pravatar.cc/150?u=a042581f4e29026704d"
-        />
-        <ProfileCard
-          name="M. S."
-          experience="12 years"
-          description="Led AWS Private Console project, impacting 260 service teams at Amazon Web Services."
-          skills={["AWS", "React", "Angular", "Spring", "Kubernetes"]}
-          commitments={["Full-time", "Part-time"]}
-          imageUrl="https://i.pravatar.cc/150?u=a042581f4e29026704d"
-        />
-        <ProfileCard
-          name="M. S."
-          experience="12 years"
-          description="Led AWS Private Console project, impacting 260 service teams at Amazon Web Services."
-          skills={["AWS", "React", "Angular", "Spring", "Kubernetes"]}
-          commitments={["Full-time", "Part-time"]}
-          imageUrl="https://i.pravatar.cc/150?u=a042581f4e29026704d"
-        />
-        <ProfileCard
-          name="M. S."
-          experience="12 years"
-          description="Led AWS Private Console project, impacting 260 service teams at Amazon Web Services."
-          skills={["AWS", "React", "Angular", "Spring", "Kubernetes"]}
-          commitments={["Full-time", "Part-time"]}
-          imageUrl="https://i.pravatar.cc/150?u=a042581f4e29026704d"
-        />
+
+        {/* Mapping through profiles */}
+        <div className="grid grid-cols-1 gap-6">
+          {profiles.map((profile) => (
+            <div onClick={() => handleCardClick(profile.id)} key={profile.id}>
+              <ProfileCard
+                company={{
+                  id: profile.id,
+                  name: profile.name,
+                  experience: profile.experience,
+                  skills: profile.expertIn,
+                  commitments: profile.worktype,
+                  imageUrl: profile.avatar,
+                }}
+                onClick={handleCardClick} // Pass the click handler to ProfileCard
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

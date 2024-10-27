@@ -1,5 +1,5 @@
 import React from "react";
-import { BsFillPersonCheckFill } from "react-icons/bs";
+import { BsFillBookmarkFill, BsFillPersonCheckFill } from "react-icons/bs";
 import { GiElectric } from "react-icons/gi";
 
 const ProfileHeader: React.FC = () => {
@@ -16,6 +16,10 @@ const ProfileHeader: React.FC = () => {
           <button className="px-4 py-1 flex items-center gap-2 text-sm text-blue-500 bg-blue-50 rounded-lg">
             <BsFillPersonCheckFill />
             Request intro
+          </button>
+          <button className="px-4 py-1 flex items-center gap-2 text-sm text-blue-500 bg-blue-50 rounded-lg">
+            <BsFillBookmarkFill />
+            Shortlist
           </button>
           <button className="px-4 py-1 text-sm flex items-center gap-1 text-white bg-blue-500 rounded-lg">
             <GiElectric />

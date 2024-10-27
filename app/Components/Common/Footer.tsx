@@ -1,9 +1,16 @@
+"use client"
+
 import Section from "@/app/HomePage/_components/Section";
+import { usePathname } from "next/navigation";
 import React from "react";
 
 const Footer: React.FC = () => {
+
+  const pathname = usePathname();
+  const isSpacialRoute = pathname.includes("/companies") || pathname.includes("/candidates") ? "hidden" : "block";
+
   return (
-    <footer className="bg-white py-8">
+    <footer className={`${isSpacialRoute} py-8`}>
       <Section>
         <div className="flex flex-col md:flex-row md:items-end px-4 text-xs md:text-sm lg:text-base">
           <div className="mt-8 md:w-1/4 mb-5 md:mb-0  font-semibold text-sm text-gray-700">

@@ -31,7 +31,7 @@ const Banner = () => {
             </Button>
           </div>
         </div>
-        <div className="w-1/2 relative">
+        <div className="w-1/2 relative hidden md:block">
           <div className="absolute bottom-14 -right-24">
             <Image
               src={globeImg}
