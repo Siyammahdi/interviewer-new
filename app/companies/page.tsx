@@ -7,11 +7,16 @@ const Companies = () => {
   return (
     <div>
       <CompaniesLayout>
-        <div className="w-1/2">
-          <Profiles />
-        </div>
-        <div className="fixed right-0 top-0 bg-white z-10 h-full w-1/2">
-          <ProfileDetails />
+        <div className="flex flex-col">
+          <div className="w-1/2 " style={{
+            scrollbarWidth: 'none',
+            msOverflowStyle: 'none',
+          }} >
+            <Profiles />
+          </div>
+          <div className="fixed right-0 top-0 bg-white z-10 h-full w-1/2">
+            <ProfileDetails />
+          </div>
         </div>
       </CompaniesLayout>
     </div>

@@ -9,6 +9,7 @@ import { GiElectric } from "react-icons/gi";
 import Image from "next/image";
 import { LiaIdCardAltSolid } from "react-icons/lia";
 import { PiCursorClickDuotone } from "react-icons/pi";
+import ExperienceCard from "../_components/ExperienceCard";
 import { GoPlay } from "react-icons/go";
 
 const ProfileDetails = () => {
@@ -38,7 +39,10 @@ const ProfileDetails = () => {
     }
 
     return (
-        <div className="my-20 border-l h-full">
+        <div className="my-20 pb-10 border-l h-full overflow-y-scroll scroll"   style={{
+            scrollbarWidth: 'none', 
+            msOverflowStyle: 'none',
+          }} >
             <div className="p-8">
                 <div className="flex gap-4 items-center">
                     {/* Profile Picture */}
@@ -124,6 +128,43 @@ const ProfileDetails = () => {
                 <h2 className="text-lg font-semibold">AI Interview</h2>
                 <div className=" mt-4 bg-black rounded-2xl py-28 flex items-center justify-center">
                     <GoPlay className='text-white' size={200} />
+                </div>
+            </div>
+
+            <div className="p-8 relative">
+                <h2 className="text-lg font-semibold pb-8">Work Experience</h2>
+                <div >
+
+                    {profileData.workExperience.map((exp, index) => (
+                        <ExperienceCard
+                            key={index}
+                            title={exp.position}
+                            company={exp.companyName}
+                            image={exp.companyLogo}
+                            period={exp.years}
+                            level={exp.level}
+                            description={exp.responsibilities}
+                        />
+                    ))}
+                </div>
+            </div>
+
+            {/* Education */}
+
+            <div className="p-8 relative">
+                <h2 className="text-lg font-semibold pb-8">Education</h2>
+                <div >
+                    {/* <div className="h-full my-2 z-40 left-[55px] border-l-2 absolute"></div> */}
+                    {profileData.education.map((edu, index) => (
+                        <ExperienceCard
+                            key={index}
+                            title={edu.degree}
+                            company={edu.institution}
+                            image={edu.logo}
+                            period={edu.years}
+                            level="Prestigious"
+                        />
+                    ))}
                 </div>
             </div>
         </div>

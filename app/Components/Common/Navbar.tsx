@@ -24,11 +24,12 @@ const Navbar = () => {
   };
 
   // Determine the background color based on the current pathname
-  const navbarBackground = pathname.includes("/companies") || pathname.includes("/candidates") ? "bg-white w-full w-full" : "bg-[#EEF9FB] max-w-7xl";
+  const navbarBackground = pathname.includes("/companies") || pathname.includes("/candidates") ? "bg-white" : "bg-[#EEF9FB]";
+  const fullWNav = pathname.includes("/companies") || pathname.includes("/candidates") ? "w-full" : "max-w-7xl";
 
   return (
     <div className={`${navbarBackground} fixed w-full top-0 z-20`}>
-      <div className={`${navbarBackground} mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between`}>
+      <div className={`${fullWNav} mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between`}>
         <div>
           <Link href="/">
             <Image

@@ -1,6 +1,7 @@
 import React from "react";
-import { FiChevronDown, FiPlus, FiSun, FiTag, FiVideo } from "react-icons/fi"; // Importing the plus icon for the button
+import { FiChevronDown, FiPlus, FiSearch, FiSun, FiTag, FiVideo } from "react-icons/fi"; // Importing the plus icon for the button
 import { GoPersonAdd } from "react-icons/go";
+import { LiaSlidersHSolid } from "react-icons/lia";
 
 
 type FilterButtonProps = {
@@ -18,16 +19,35 @@ const FilterButton: React.FC<FilterButtonProps> = ({ icon, label }) => {
   );
 };
 
-const ShortlistPage: React.FC = () => {
+const TeamPage: React.FC = () => {
   return (
     <div className="max-w-5xl mx-auto flex flex-col py-32 gap-20 items-center justify-start h-screen">
       {/* Title */}
-      <div className="w-full text-start">
-        <h1 className="text-xl font-semibold text-gray-800 mb-2">Shortlist</h1>
-        <p className="text-sm text-gray-500 mb-6">
-          Manage your shortlist so that you can hire the best talent.
-        </p>
+      <div className="w-full space-y-10 text-start">
+        {/* Search Bar */}
+        <div className="flex justify-between items-center p-2 bg-white border rounded-full shadow-sm">
+          {/* Left Filter Icon Button */}
+          <div className="flex items-center">
+            <button className="p-4 h-fit bg-gray-100 rounded-full text-gray-500">
+              <LiaSlidersHSolid size={20} />
+            </button>
 
+            {/* Search Input */}
+            <div className="mx-4">
+              <p className="text-xs">Skills and background</p>
+              <input
+                type="text"
+                placeholder="Search people"
+                className="flex-grow placeholder:text-sm text-gray-700 bg-transparent outline-none"
+              />
+            </div>
+          </div>
+
+          {/* Right Search Button */}
+          <button className="p-4 text-white bg-blue-500 rounded-full">
+            <FiSearch size={20} />
+          </button>
+        </div>
         <div className="border-b py-3">
           <div className="flex items-center space-x-4 mt-4">
             {/* Status Button */}
@@ -62,4 +82,4 @@ const ShortlistPage: React.FC = () => {
   );
 };
 
-export default ShortlistPage;
+export default TeamPage;

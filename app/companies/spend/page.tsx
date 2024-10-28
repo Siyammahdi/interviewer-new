@@ -18,14 +18,14 @@ const FilterButton: React.FC<FilterButtonProps> = ({ icon, label }) => {
   );
 };
 
-const ShortlistPage: React.FC = () => {
+const SpendPage: React.FC = () => {
   return (
     <div className="max-w-5xl mx-auto flex flex-col py-32 gap-20 items-center justify-start h-screen">
       {/* Title */}
       <div className="w-full text-start">
-        <h1 className="text-xl font-semibold text-gray-800 mb-2">Shortlist</h1>
+        <h1 className="text-xl font-semibold text-gray-800 mb-2">Spend</h1>
         <p className="text-sm text-gray-500 mb-6">
-          Manage your shortlist so that you can hire the best talent.
+          You can use this page to analyze your spend on your talent.
         </p>
 
         <div className="border-b py-3">
@@ -62,4 +62,4 @@ const ShortlistPage: React.FC = () => {
   );
 };
 
-export default ShortlistPage;
+export default SpendPage;

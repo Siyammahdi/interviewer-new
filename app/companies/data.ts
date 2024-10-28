@@ -16,6 +16,7 @@ export interface WorkExperience {
     position: string;
     companyName: string;
     companyLogo: string;
+    level: string;
     years: string;
     responsibilities: string[];
 }
@@ -63,8 +64,9 @@ export const profiles: Profile[] = [
             {
                 position: "Senior Software Developer",
                 companyName: "Tech Solutions Inc.",
-                companyLogo: "https://example.com/techsolutions_logo.png",
+                companyLogo: "/Company/company1.png",
                 years: "2021 - Present",
+                level: "Prestigious",
                 responsibilities: [
                     "Led a team of developers to implement an e-commerce platform, increasing sales by 25%.",
                     "Enhanced system architecture to support scalable microservices, reducing downtime by 35%.",
@@ -74,7 +76,8 @@ export const profiles: Profile[] = [
             {
                 position: "Software Engineer",
                 companyName: "Innovative Labs",
-                companyLogo: "https://example.com/innovativelabs_logo.png",
+                companyLogo: "/Company/company2.png",
+                level: "Exceptional",
                 years: "2019 - 2021",
                 responsibilities: [
                     "Developed a data processing pipeline that improved efficiency by 40%.",
@@ -120,33 +123,53 @@ export const profiles: Profile[] = [
             {
                 position: "Backend Engineer",
                 companyName: "Cloudify Corp",
-                companyLogo: "https://example.com/cloudify_logo.png",
+                companyLogo: "/Public/Company/company2.png",
+                level: "Prestigious",
                 years: "2020 - Present",
                 responsibilities: [
                     "Built and optimized cloud-based solutions, enhancing system reliability by 40%.",
                     "Implemented robust security protocols, achieving 100% data compliance.",
-                    "Collaborated closely with DevOps to automate infrastructure deployments."
+                    "Constructed and configured build pipelines in Bamboo. Introduced pipeline-as-code and infrastructure-as-code concepts to the project. Developed and optimized project build scripts to reduce CI/CD time and overhead, incorporating concurrency and asynchronous task execution. Managed server stacks for CI/CD deployments. Implemented build pipelines to facilitate the transition of the codebase to CI/CD. Maintained SVN branches, resolving merge conflicts, and created a branching strategy for the unique software solution. Developed command-line and simple GUI utilities in C# and PowerShell to assist developers, streamline processes, and address missing .NET features in PowerShell. Wrote and updated documentation outlining the technical design of DevOps initiatives. Provided ongoing maintenance and development of deployment and artifact fixes."
                 ]
             },
             {
                 position: "Software Developer",
                 companyName: "DataWare Solutions",
-                companyLogo: "https://example.com/dataware_logo.png",
+                companyLogo: "/Public/Company/company3.jpg",
+                level: "Exceptional",
                 years: "2018 - 2020",
                 responsibilities: [
                     "Designed and maintained scalable REST APIs for data management.",
-                    "Developed automated testing pipelines, reducing testing time by 30%.",
+                    "Designed and integrated Ansible playbooks for automated deployment of infrastructure, incorporating features for future delivery. Led design, implementation, and maintenance activities for Openshift 3/4 clusters. Executed RHEL 7/8 implementation and maintenance tasks. Designed and implemented Portworx-as-a-service into Openshift environments. Conducted client training on adopting and integrating newly implemented technologies into support workflows. Created custom Ansible modules to encapsulate client edge and corner cases in workflows. Implemented and administered Ansible Tower. Specialized in debugging Openshift cluster failure states.",
                     "Conducted regular code reviews and contributed to knowledge-sharing sessions."
                 ]
-            }
+            },
+            {
+                position: "Lead Backend Developer",
+                companyName: "QuickApps",
+                companyLogo: "/Public/Company/company3.jpg",
+                years: "2020 - Present",
+                level: "Good",
+                responsibilities: [
+                    "Drove technical decisions for features and development on Posit Connect and Connect-Setup platforms. Maintained and updated RESTful APIs in Posit Connect and Connect-Setup using Golang. Addressed technical debt in the Posit Connect Platform. Automated and integrated codebase areas into CI/CD platforms. Troubleshot and resolved bugs escalated through customer support. Mentored less experienced Software Engineers, emphasizing best coding practices and debugging tools. Authored guides, tutorials, and maintained internal and public-facing documentation for Posit Connect product.",
+                    "Migrated services to AWS, reducing infrastructure costs by 30%.",
+                    "Worked with frontend teams to integrate GraphQL, enhancing data accessibility."
+                ]
+            },
         ],
         education: [
             {
-                institution: "MIT",
+                institution: "Bentley University",
                 degree: "M.Sc. in Software Engineering",
-                logo: "https://example.com/mit_logo.png",
+                logo: "/Public/Company/company1.jpg",
                 years: "2016 - 2020"
-            }
+            },
+            {
+                institution: "Middlebury College",
+                degree: "BA, Economics",
+                logo: "/Public/Company/company1.jpg",
+                years: "2016 - 2020"
+            },
         ],
         awards: [
             "Hackathon Champion 2021",
@@ -177,6 +200,7 @@ export const profiles: Profile[] = [
                 position: "Full Stack Developer",
                 companyName: "WebWorks Ltd.",
                 companyLogo: "https://example.com/webworks_logo.png",
+                level: "Exceptional",
                 years: "2019 - Present",
                 responsibilities: [
                     "Developed dynamic and interactive web applications, reducing load times by 30%.",
@@ -188,6 +212,7 @@ export const profiles: Profile[] = [
                 position: "Junior Developer",
                 companyName: "NextGen Tech",
                 companyLogo: "https://example.com/nextgen_logo.png",
+                level: "Prestigious",
                 years: "2017 - 2019",
                 responsibilities: [
                     "Assisted in the development of web applications using Angular and Node.js.",
@@ -232,6 +257,7 @@ export const profiles: Profile[] = [
                 companyName: "FinTech Solutions",
                 companyLogo: "https://example.com/fintech_logo.png",
                 years: "2021 - Present",
+                level: "Prestigious",
                 responsibilities: [
                     "Developed financial analytics tools, improving user engagement by 15%.",
                     "Enhanced backend performance, reducing processing time by 25%.",
@@ -243,6 +269,7 @@ export const profiles: Profile[] = [
                 companyName: "MicroTech Corp",
                 companyLogo: "https://example.com/microtech_logo.png",
                 years: "2018 - 2021",
+                level: "Prestigious",
                 responsibilities: [
                     "Implemented new features in legacy systems, reducing error rates by 20%.",
                     "Automated deployment processes, cutting deployment time by 45%.",
@@ -287,6 +314,7 @@ export const profiles: Profile[] = [
                 companyName: "QuickApps",
                 companyLogo: "https://example.com/quickapps_logo.png",
                 years: "2020 - Present",
+                level: "Prestigious",
                 responsibilities: [
                     "Led backend team in building scalable APIs, improving response times by 40%.",
                     "Migrated services to AWS, reducing infrastructure costs by 30%.",
@@ -298,6 +326,7 @@ export const profiles: Profile[] = [
                 companyName: "RapidDev Inc.",
                 companyLogo: "https://example.com/rapiddev_logo.png",
                 years: "2017 - 2020",
+                level: "Prestigious",
                 responsibilities: [
                     "Developed REST APIs for high-traffic applications, handling over 100k requests daily.",
                     "Implemented caching strategies, reducing database load by 50%.",
@@ -340,6 +369,7 @@ export const profiles: Profile[] = [
                 position: "Senior Developer",
                 companyName: "TechWave",
                 companyLogo: "https://example.com/techwave_logo.png",
+                level: "Prestigious",
                 years: "2020 - Present",
                 responsibilities: [
                     "Built a secure API for financial transactions, improving processing efficiency by 30%.",
@@ -351,6 +381,7 @@ export const profiles: Profile[] = [
                 position: "Software Engineer",
                 companyName: "MegaSoft Ltd.",
                 companyLogo: "https://example.com/megasoft_logo.png",
+                level: "Prestigious",
                 years: "2016 - 2020",
                 responsibilities: [
                     "Developed and maintained client-server applications for business clients.",
@@ -395,6 +426,7 @@ export const profiles: Profile[] = [
                 companyName: "Webify Solutions",
                 companyLogo: "https://example.com/webify_logo.png",
                 years: "2019 - Present",
+                level: "Prestigious",
                 responsibilities: [
                     "Developed web applications for data analytics, reducing processing time by 20%.",
                     "Implemented Docker containers, streamlining the development environment.",
@@ -406,6 +438,7 @@ export const profiles: Profile[] = [
                 companyName: "CodeWorks",
                 companyLogo: "https://example.com/codeworks_logo.png",
                 years: "2017 - 2019",
+                level: "Exceptional",
                 responsibilities: [
                     "Created database schemas for optimized data retrieval.",
                     "Built data migration tools, reducing migration time by 50%.",
@@ -449,6 +482,7 @@ export const profiles: Profile[] = [
                 companyName: "AppMasters",
                 companyLogo: "https://example.com/appmasters_logo.png",
                 years: "2021 - Present",
+                level: "Prestigious",
                 responsibilities: [
                     "Developed scalable backend APIs using Node.js, improving data retrieval speed.",
                     "Collaborated with frontend teams to create dynamic UIs with React.",
@@ -460,6 +494,7 @@ export const profiles: Profile[] = [
                 companyName: "DevHouse",
                 companyLogo: "https://example.com/devhouse_logo.png",
                 years: "2018 - 2021",
+                level: "Prestigious",
                 responsibilities: [
                     "Built responsive front-end applications using JavaScript and HTML/CSS.",
                     "Optimized code performance, reducing page load times by 25%.",
@@ -503,6 +538,7 @@ export const profiles: Profile[] = [
                 companyName: "CloudNet",
                 companyLogo: "https://example.com/cloudnet_logo.png",
                 years: "2018 - Present",
+                level: "Prestigious",
                 responsibilities: [
                     "Managed data processing applications, handling over 200k transactions daily.",
                     "Migrated legacy systems to Laravel, improving maintainability by 60%.",
@@ -514,6 +550,7 @@ export const profiles: Profile[] = [
                 companyName: "BrightCode",
                 companyLogo: "https://example.com/brightcode_logo.png",
                 years: "2016 - 2018",
+                level: "Prestigious",
                 responsibilities: [
                     "Supported senior developers in backend tasks, gaining expertise in PHP and MySQL.",
                     "Participated in code reviews to enhance code quality and team collaboration.",
@@ -557,6 +594,7 @@ export const profiles: Profile[] = [
                 companyName: "Tech Innovations",
                 companyLogo: "https://example.com/tech_innovations_logo.png",
                 years: "2020 - Present",
+                level: "Prestigious",
                 responsibilities: [
                     "Spearheaded the development of user-facing features for a large-scale web application.",
                     "Optimized application performance, reducing load time by 25%.",
@@ -568,6 +606,7 @@ export const profiles: Profile[] = [
                 companyName: "Creative Solutions",
                 companyLogo: "https://example.com/creative_solutions_logo.png",
                 years: "2018 - 2020",
+                level: "Prestigious",
                 responsibilities: [
                     "Developed RESTful APIs and integrated them with frontend components.",
                     "Collaborated with designers to implement responsive UI/UX.",

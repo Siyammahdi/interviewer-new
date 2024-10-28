@@ -13,7 +13,7 @@ const CompaniesLayout: React.FC<CompaniesLayoutProps> = ({ children }) => {
     <SelectedCompanyProvider>
       <div>
         <Menubar />
-        <div className="mx-10">{children}</div>
+        <div className="mx-10" >{children}</div>
       </div>
     </SelectedCompanyProvider>
   );
